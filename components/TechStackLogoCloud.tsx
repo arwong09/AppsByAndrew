@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export default function TechStackLogoCloud() {
   return (
-    <div className="bg-black">
+    <div className="bg-black h-36 md:h-16">
       <div className="max-w-7xl">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6 h-16">
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 relative">
+        <div className="grid grid-cols-3 gap-4 md:gap-8 md:grid-cols-6 lg:grid-cols-6 h-16">
+          <div className="col-span-1 flex justify-center relative h-16">
             <Image
               fill
               className="h-12 object-contain"
@@ -13,7 +13,7 @@ export default function TechStackLogoCloud() {
               alt="React"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 relative">
+          <div className="col-span-1 flex justify-center relative h-16">
             <Image
               fill
               className="h-12 object-contain"
@@ -21,7 +21,7 @@ export default function TechStackLogoCloud() {
               alt="TypeScript"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 relative">
+          <div className="col-span-1 flex justify-center relative h-16">
             <Image
               fill
               className="h-12 object-contain"
@@ -29,7 +29,7 @@ export default function TechStackLogoCloud() {
               alt="Tailwind"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 relative">
+          <div className="col-span-1 flex justify-center relative h-16">
             <Image
               fill
               className="h-12 object-contain"
@@ -37,7 +37,7 @@ export default function TechStackLogoCloud() {
               alt="Firebase"
             />
           </div>
-          <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1 relative">
+          <div className="col-span-1 flex justify-center relative h-16">
             <Image
               fill
               className="h-12 object-contain"
@@ -45,7 +45,7 @@ export default function TechStackLogoCloud() {
               alt="NextJS"
             />
           </div>
-          <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1 relative">
+          <div className="col-span-1 flex justify-center relative h-16">
             <Image
               fill
               className="h-12 object-contain"
