@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm'
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-black px-32 max-w-7xl mx-auto">
+    <div className="flex flex-col bg-black px-32 max-w-7xl mx-auto text-white">
       <main>
         <section className="flex flex-col justify-center h-screen">
           <h1 className="text-6xl font-bold">

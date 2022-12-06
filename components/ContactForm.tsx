@@ -1,15 +1,27 @@
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import addWeeks from 'date-fns/addWeeks'
 import format from 'date-fns/format'
+import { FormEvent, useState } from 'react'
+import { addDoc, collection } from 'firebase/firestore'
+import firestore from '../utils/firebase'
 
 export default function ContactForm() {
+  const [name, setName] = useState<string>('')
   const today = new Date()
   const in8Weeks = addWeeks(today, 8)
   const in13Weeks = addWeeks(today, 13)
   const in26Weeks = addWeeks(today, 26)
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const collectionRef = collection(firestore, '/leads')
+    addDoc(collectionRef, {
+      name,
+    })
+  }
+
   return (
-    <form className="w-full">
+    <form className="w-full" onSubmit={handleSubmit}>
       <div className="flex flex-row">
         <div className="grow">
           <label
@@ -20,9 +32,11 @@ export default function ContactForm() {
           </label>
           <div className="relative mt-1.5 mr-1">
             <input
+              onChange={(e) => setName(e.currentTarget.value)}
               type="text"
               id="name"
               name="name"
+              value={name}
               className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
             ></input>
           </div>
@@ -46,20 +60,20 @@ export default function ContactForm() {
       </div>
       <label
         htmlFor="email"
-        className="block text-base font-medium text-gray-300 mt-2"
+        className="block text-base font-medium text-gray-300 mt-4"
       >
         Email
       </label>
-      <div className="relative mt-1.5">
+      <div className="relative mt-1.5 mr-1">
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
-        ></input>
+        />
       </div>
 
-      <div className="flex flex-row mt-2">
+      <div className="flex flex-row mt-4">
         <div className="grow">
           <label
             htmlFor="currency"
@@ -105,7 +119,7 @@ export default function ContactForm() {
 
       <label
         htmlFor="timeline"
-        className="block text-base font-medium text-gray-300 mt-2"
+        className="block text-base font-medium text-gray-300 mt-4"
       >
         Timeline
       </label>
@@ -127,7 +141,7 @@ export default function ContactForm() {
           type="submit"
           className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
-          Get started
+          Contact Us
         </button>
       </div>
     </form>
