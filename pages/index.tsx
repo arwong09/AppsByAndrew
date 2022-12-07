@@ -62,7 +62,7 @@ export default function Home() {
             React, React Native, NodeJS, TypeScript, Tailwind, NextJS, Firebase
           </p>
         </section>
-        <section className="flex flex-col justify-center h-screen mt-24 sm:mt-0">
+        <section className="flex flex-col justify-center h-screen my-24 sm:my-0">
           <div className="flex sm:flex-row flex-col">
             <div className="flex-1 shrink">
               <h2 className="lg:text-6xl md:text-4xl text-4xl font-bold">

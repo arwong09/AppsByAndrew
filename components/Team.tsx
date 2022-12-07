@@ -20,11 +20,11 @@ const people = [
   {
     name: 'Andrew Wong',
     role: 'Senior Front-end Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: '/andrew_wong.JPG',
     bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
-    twitterUrl: '#',
-    linkedinUrl: '#',
+    githubUrl: 'https://github.com/arwong09',
+    twitterUrl: 'https://twitter.com/andrewwong24',
+    linkedinUrl: 'https://linkedin.com/in/arwong09',
   },
   // More people...
 ]
@@ -57,8 +57,10 @@ export default function Team() {
               <ul role="list" className="flex space-x-5">
                 <li>
                   <a
-                    href={person.twitterUrl}
+                    href={person.githubUrl}
                     className="text-gray-400 hover:text-gray-500"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="sr-only">GitHub</span>
                     <svg
@@ -79,6 +81,8 @@ export default function Team() {
                   <a
                     href={person.twitterUrl}
                     className="text-gray-400 hover:text-gray-500"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="sr-only">Twitter</span>
                     <svg
@@ -95,6 +99,8 @@ export default function Team() {
                   <a
                     href={person.linkedinUrl}
                     className="text-gray-400 hover:text-gray-500"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="sr-only">LinkedIn</span>
                     <svg
