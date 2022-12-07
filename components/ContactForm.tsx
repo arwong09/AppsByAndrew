@@ -126,7 +126,6 @@ export default function ContactForm() {
               id="budget"
               name="budget"
               className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
-              defaultValue="$75K - $150K"
             >
               <option>Less than $75K</option>
               <option>$75K - $150K</option>

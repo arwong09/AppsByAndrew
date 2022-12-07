@@ -11,6 +11,7 @@ export default function TechStackLogoCloud() {
               className="h-12 object-contain"
               src="/React-icon.svg.png"
               alt="React"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -19,6 +20,7 @@ export default function TechStackLogoCloud() {
               className="h-12 object-contain"
               src="/Typescript_logo_2020.svg"
               alt="TypeScript"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -27,6 +29,7 @@ export default function TechStackLogoCloud() {
               className="h-12 object-contain"
               src="/Tailwind_CSS_logo.svg"
               alt="Tailwind"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -35,6 +38,7 @@ export default function TechStackLogoCloud() {
               className="h-12 object-contain"
               src="/firebase-logomark.svg"
               alt="Firebase"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -43,6 +47,7 @@ export default function TechStackLogoCloud() {
               className="h-12 object-contain"
               src="/Nextjs-logo.svg"
               alt="NextJS"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -51,6 +56,7 @@ export default function TechStackLogoCloud() {
               className="h-12 object-contain"
               src="/Node.js_logo.svg"
               alt="NodeJS"
+              sizes="144px"
             />
           </div>
         </div>

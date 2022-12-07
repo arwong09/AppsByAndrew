@@ -11,6 +11,7 @@ export default function LogoCloud() {
               className="h-12 object-contain"
               src="/Meta_lockup_mono_white_RGB.svg"
               alt="Meta"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -19,6 +20,7 @@ export default function LogoCloud() {
               className="h-12 object-contain"
               src="/Stripe wordmark - white.svg"
               alt="Stripe"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -27,6 +29,7 @@ export default function LogoCloud() {
               className="h-12 object-contain"
               src="/instacart-color-logo.svg"
               alt="Instacart"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -35,6 +38,7 @@ export default function LogoCloud() {
               className="h-12 object-contain"
               src="/Lyft-Logo.wine.png"
               alt="Lyft"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -43,6 +47,7 @@ export default function LogoCloud() {
               className="h-12 object-contain"
               src="/Y_Combinator_logo_text_wordmark.png"
               alt="Y Combinator"
+              sizes="144px"
             />
           </div>
           <div className="col-span-1 flex justify-center relative h-16">
@@ -51,6 +56,7 @@ export default function LogoCloud() {
               className="h-12 object-contain"
               src="/Instagram_Glyph_Gradient_RGB.svg"
               alt="Instagram"
+              sizes="144px"
             />
           </div>
         </div>
