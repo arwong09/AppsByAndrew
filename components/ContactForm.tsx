@@ -3,9 +3,16 @@ import format from 'date-fns/format'
 import { FormEvent, useState } from 'react'
 import { addDoc, collection } from 'firebase/firestore'
 import firestore from '../utils/firebase'
+import { useRouter } from 'next/router'
 
 export default function ContactForm() {
+  const router = useRouter()
   const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [phone, setPhone] = useState<string>('')
+  const [projectType, setProjectType] = useState<string>('Mobile App')
+  const [budget, setBudget] = useState<string>('$75K - $150K')
+  const [timeline, setTimeline] = useState<string>('ASAP')
   const today = new Date()
   const in8Weeks = addWeeks(today, 8)
   const in13Weeks = addWeeks(today, 13)
@@ -17,7 +24,13 @@ export default function ContactForm() {
     const collectionRef = collection(firestore, '/leads')
     addDoc(collectionRef, {
       name,
+      email,
+      phone,
+      projectType,
+      budget,
+      timeline,
     })
+    router.push('/success')
   }
 
   return (
@@ -50,6 +63,8 @@ export default function ContactForm() {
           </label>
           <div className="relative mt-1.5 ml-1">
             <input
+              onChange={(e) => setPhone(e.currentTarget.value)}
+              value={phone}
               type="text"
               id="Phone"
               name="Phone"
@@ -66,6 +81,8 @@ export default function ContactForm() {
       </label>
       <div className="relative mt-1.5 mr-1">
         <input
+          onChange={(e) => setEmail(e.currentTarget.value)}
+          value={email}
           type="email"
           id="email"
           name="email"
@@ -86,7 +103,8 @@ export default function ContactForm() {
               id="type"
               name="type"
               className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
-              defaultValue="United States (USD)"
+              onChange={(e) => setProjectType(e.currentTarget.value)}
+              value={projectType}
             >
               <option>Mobile App</option>
               <option>Web App</option>
@@ -103,6 +121,8 @@ export default function ContactForm() {
           </label>
           <div className="relative mt-1.5 ml-1">
             <select
+              onChange={(e) => setBudget(e.currentTarget.value)}
+              value={budget}
               id="budget"
               name="budget"
               className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
@@ -128,7 +148,8 @@ export default function ContactForm() {
           id="timeline"
           name="timeline"
           className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
-          defaultValue="ASAP"
+          value={timeline}
+          onChange={(e) => setTimeline(e.currentTarget.value)}
         >
           <option>ASAP</option>
           <option>(8 weeks) - deliver by {format(in8Weeks, 'MMM d')} </option>
