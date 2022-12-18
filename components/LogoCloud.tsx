@@ -1,64 +1,24 @@
 import Image from 'next/image'
 
-export default function LogoCloud() {
+interface Props {
+  logos: { src: string; alt: string }[]
+}
+
+export default function LogoCloud({ logos }: Props) {
   return (
-    <div className="bg-black h-36 md:h-16">
-      <div className="max-w-7xl">
-        <div className="grid grid-cols-3 gap-4 md:gap-8 md:grid-cols-6 lg:grid-cols-6 h-16">
-          <div className="col-span-1 flex justify-center relative h-16">
-            <Image
-              fill
-              className="h-12 object-contain"
-              src="/Meta_lockup_mono_white_RGB.svg"
-              alt="Meta"
-              sizes="144px"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center relative h-16">
-            <Image
-              fill
-              className="h-12 object-contain"
-              src="/Stripe wordmark - white.svg"
-              alt="Stripe"
-              sizes="144px"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center relative h-16">
-            <Image
-              fill
-              className="h-12 object-contain"
-              src="/instacart-color-logo.svg"
-              alt="Instacart"
-              sizes="144px"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center relative h-16">
-            <Image
-              fill
-              className="h-12 object-contain"
-              src="/Lyft-Logo.wine.png"
-              alt="Lyft"
-              sizes="144px"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center relative h-16">
-            <Image
-              fill
-              className="h-12 object-contain"
-              src="/Y_Combinator_logo_text_wordmark.png"
-              alt="Y Combinator"
-              sizes="144px"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center relative h-16">
-            <Image
-              fill
-              className="h-12 object-contain"
-              src="/Instagram_Glyph_Gradient_RGB.svg"
-              alt="Instagram"
-              sizes="144px"
-            />
-          </div>
+    <div className="h-12">
+      <div className="max-w-7xl h-full">
+        <div className="flex flex-row items-center justify-center relative h-full w-full">
+          {logos.map(({ src, alt }) => (
+            // <div className="flex justify-center relative w-full" key={src}>
+            <div className="grow flex flex-row justify-center items-center relative h-full mr-4 last:mr-0 sm:mr-6 md:mr-8">
+              <img
+                src={src}
+                alt={alt}
+                style={{ width: 'auto', height: '100%' }}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

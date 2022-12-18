@@ -38,8 +38,28 @@ export default function ContactForm() {
       <div className="flex flex-row">
         <div className="grow">
           <label
+            htmlFor="email"
+            className="block text-base font-medium text-gray-600"
+          >
+            Email
+          </label>
+          <div className="relative mt-1.5 mr-1">
+            <input
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              value={email}
+              type="email"
+              id="email"
+              name="email"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-row mt-4">
+        <div className="grow">
+          <label
             htmlFor="name"
-            className="block text-base font-medium text-gray-300"
+            className="block text-base font-medium text-gray-600"
           >
             Name
           </label>
@@ -50,14 +70,14 @@ export default function ContactForm() {
               id="name"
               name="name"
               value={name}
-              className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
-            ></input>
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
+            />
           </div>
         </div>
-        <div className="grow">
+        <div className="grow w-1/2">
           <label
             htmlFor="phone"
-            className="block text-base font-medium text-gray-300"
+            className="block text-base font-medium text-gray-600"
           >
             Phone
           </label>
@@ -68,33 +88,17 @@ export default function ContactForm() {
               type="text"
               id="Phone"
               name="Phone"
-              className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
             ></input>
           </div>
         </div>
       </div>
-      <label
-        htmlFor="email"
-        className="block text-base font-medium text-gray-300 mt-4"
-      >
-        Email
-      </label>
-      <div className="relative mt-1.5 mr-1">
-        <input
-          onChange={(e) => setEmail(e.currentTarget.value)}
-          value={email}
-          type="email"
-          id="email"
-          name="email"
-          className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
-        />
-      </div>
 
       <div className="flex flex-row mt-4">
-        <div className="grow">
+        <div className="grow w-1/2">
           <label
             htmlFor="currency"
-            className="block text-base font-medium text-gray-300"
+            className="block text-base font-medium text-gray-600"
           >
             Project Type
           </label>
@@ -102,7 +106,7 @@ export default function ContactForm() {
             <select
               id="type"
               name="type"
-              className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
               onChange={(e) => setProjectType(e.currentTarget.value)}
               value={projectType}
             >
@@ -112,10 +116,10 @@ export default function ContactForm() {
             </select>
           </div>
         </div>
-        <div className="grow">
+        <div className="grow w-1/2">
           <label
             htmlFor="budget"
-            className="block text-base font-medium text-gray-300"
+            className="block text-base font-medium text-gray-600"
           >
             Budget
           </label>
@@ -125,7 +129,7 @@ export default function ContactForm() {
               value={budget}
               id="budget"
               name="budget"
-              className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
             >
               <option>Less than $75K</option>
               <option>$75K - $150K</option>
@@ -138,7 +142,7 @@ export default function ContactForm() {
 
       <label
         htmlFor="timeline"
-        className="block text-base font-medium text-gray-300 mt-4"
+        className="block text-base font-medium text-gray-600 mt-4"
       >
         Timeline
       </label>
@@ -146,7 +150,7 @@ export default function ContactForm() {
         <select
           id="timeline"
           name="timeline"
-          className="block w-full appearance-none rounded-md border border-transparent bg-gray-700  py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm"
+          className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
           value={timeline}
           onChange={(e) => setTimeline(e.currentTarget.value)}
         >
@@ -159,7 +163,7 @@ export default function ContactForm() {
       <div className="text-right sm:col-span-2 mt-4">
         <button
           type="submit"
-          className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="inline-flex justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
         >
           Contact Us
         </button>

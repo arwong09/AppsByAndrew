@@ -3,22 +3,83 @@ import TechStackLogoCloud from '../components/TechStackLogoCloud'
 import Team from '../components/Team'
 import styles from '../styles/Home.module.css'
 import ContactForm from '../components/ContactForm'
+import Link from 'next/link'
+import Image from 'next/image'
+
+const LOGOS = [
+  {
+    src: '/Stripe wordmark - blurple.svg',
+    alt: 'Stripe Logo',
+  },
+  {
+    src: '/Instagram_Glyph_Gradient_RGB.svg',
+    alt: 'Instagram Logo',
+  },
+  {
+    src: '/markup-cropped.svg',
+    alt: 'Meta Logo',
+  },
+  {
+    src: '/instacart-color-logo.svg',
+    alt: 'Instacart Logo',
+  },
+  {
+    src: '/Lyft_logo.svg',
+    alt: 'Lyft Logo',
+  },
+  {
+    src: '/yclogo.svg',
+    alt: 'Y Combinator Logo',
+  },
+]
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-black px-12 lg:px-32 max-w-7xl mx-auto text-white">
+    <div className="flex flex-col bg-white px-6 lg:px-32 max-w-7xl mx-auto text-black">
       <main>
-        <section className="flex flex-col justify-center h-screen">
-          <h1 className="lg:text-6xl md:text-4xl text-4xl font-bold">
-            <span className="text-teal-400">Dev Collective</span> is a co-op of
-            software engineers with deep industry experience.
+        <section className="flex flex-col justify-center">
+          <h1 className="mt-16 md:mt-24 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text">
+            Brooklyn Dev Collective
           </h1>
-          <div className="mt-14 w-full">
-            <LogoCloud />
+          <h1 className=" text-5xl md:text-6xl font-extrabold">
+            is a co-op for seasoned software engineers.
+          </h1>
+
+          <div className="flex flex-row justify-center items-center h-80 mt-16">
+            <div className="relative h-full grow rounded-lg overflow-hidden">
+              <Image
+                src="/rob.jpeg"
+                fill
+                alt="Rob Honsby"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className="relative h-full grow rounded-lg overflow-hidden mx-2">
+              <Image
+                src="/andrew.jpeg"
+                fill
+                alt="Andrew Wong"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className="relative h-full grow rounded-lg overflow-hidden">
+              <Image
+                src="/alex.jpeg"
+                fill
+                alt="Alex Reichert"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          </div>
+          <div className="flex flex-row justify-center items-center mt-4 text-sm text-blue-400 font-light mb-4">
+            <Link href="/">View Portfolio &gt;</Link>
+          </div>
+          <div className="mt-6 w-full">
+            <LogoCloud logos={LOGOS} />
           </div>
         </section>
 
-        <section className="flex flex-col justify-center mt-24">
+        {/* <section className="flex flex-col justify-center mt-24">
           <h2 className="lg:text-6xl md:text-4xl text-4xl font-bold">
             We&apos;ve worked at{' '}
             <span className="text-teal-400">
@@ -50,6 +111,7 @@ export default function Home() {
             </a>
           </p>
         </section>
+
         <section className="flex flex-col justify-center mt-64">
           <h2 className="lg:text-6xl md:text-4xl text-4xl font-bold">
             We&apos;ve curated a process and tech stack that allow us to build{' '}
@@ -61,20 +123,20 @@ export default function Home() {
           <p className="text-gray-400 mt-10">
             React, React Native, NodeJS, TypeScript, Tailwind, NextJS, Firebase
           </p>
-        </section>
-        <section className="flex flex-col justify-center h-screen my-24 sm:my-0">
+        </section> */}
+
+        <section className="flex flex-col justify-center my-32">
           <div className="flex sm:flex-row flex-col">
             <div className="flex-1 shrink">
-              <h2 className="lg:text-6xl md:text-4xl text-4xl font-bold">
+              <h2 className="md:text-6xl text-5xl font-bold">
                 Want to work with us?
               </h2>
-              <h2 className="text-base sm:text-xl lg:text-3xl font-medium mt-4 sm:mt-12">
-                <span className="text-teal-400">Dev Collective</span> exists to
-                share knowledge, incubate ideas, and continue building{' '}
-                <span className="text-teal-400">
-                  products we&apos;re proud of
-                </span>
-                .
+              <h2 className="text-xl md:text-2xl mt-4 text-gray-500">
+                <span className="bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text font-bold">
+                  BKDC
+                </span>{' '}
+                exists to share knowledge, incubate ideas, and build world-class
+                products.
               </h2>
             </div>
             <div className="sm:max-w-xs sm:ml-24 mt-12 sm:mt-0 mx-auto">
