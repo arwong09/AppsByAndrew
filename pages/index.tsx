@@ -52,6 +52,8 @@ export default function Home() {
                 fill
                 alt="Rob Honsby"
                 style={{ objectFit: 'cover' }}
+                priority
+                sizes="(max-width: 1280px) 336px"
               />
             </div>
             <div className="relative h-full grow rounded-lg overflow-hidden mx-2">
@@ -60,6 +62,8 @@ export default function Home() {
                 fill
                 alt="Andrew Wong"
                 style={{ objectFit: 'cover' }}
+                priority
+                sizes="(max-width: 1280px) 336px"
               />
             </div>
             <div className="relative h-full grow rounded-lg overflow-hidden">
@@ -68,6 +72,8 @@ export default function Home() {
                 fill
                 alt="Alex Reichert"
                 style={{ objectFit: 'cover' }}
+                priority
+                sizes="(max-width: 1280px) 336px"
               />
             </div>
           </div>
