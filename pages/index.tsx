@@ -64,7 +64,7 @@ export default function Home() {
             </div>
             <div className="relative h-full grow rounded-lg overflow-hidden mx-2">
               <Image
-                src="/andrew.jpeg"
+                src="/andrew.jpg"
                 fill
                 alt="Andrew Wong"
                 style={{ objectFit: 'cover' }}
