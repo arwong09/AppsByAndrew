@@ -10,8 +10,10 @@ export default function LogoCloud({ logos }: Props) {
       <div className="max-w-7xl h-full">
         <div className="flex flex-row items-center justify-center relative h-full w-full">
           {logos.map(({ src, alt }) => (
-            // <div className="flex justify-center relative w-full" key={src}>
-            <div className="grow flex flex-row justify-center items-center relative h-full mr-4 last:mr-0 sm:mr-6 md:mr-8">
+            <div
+              key={src}
+              className="grow flex flex-row justify-center items-center relative h-full mr-4 last:mr-0 sm:mr-6 md:mr-8"
+            >
               <img
                 src={src}
                 alt={alt}
