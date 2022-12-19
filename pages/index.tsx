@@ -60,6 +60,7 @@ export default function Home() {
                 style={{ objectFit: 'cover' }}
                 priority
                 sizes="(max-width: 1280px) 336px"
+                placeholder="blur"
               />
             </div>
             <div className="relative h-full grow rounded-lg overflow-hidden mx-2">
@@ -70,6 +71,7 @@ export default function Home() {
                 style={{ objectFit: 'cover' }}
                 priority
                 sizes="(max-width: 1280px) 336px"
+                placeholder="blur"
               />
             </div>
             <div className="relative h-full grow rounded-lg overflow-hidden">
@@ -80,6 +82,7 @@ export default function Home() {
                 style={{ objectFit: 'cover' }}
                 priority
                 sizes="(max-width: 1280px) 336px"
+                placeholder="blur"
               />
             </div>
           </div>
