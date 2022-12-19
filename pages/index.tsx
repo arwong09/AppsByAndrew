@@ -10,26 +10,32 @@ const LOGOS = [
   {
     src: '/Stripe wordmark - blurple.svg',
     alt: 'Stripe Logo',
+    flexBasis: '9.2%',
   },
   {
     src: '/Instagram_Glyph_Gradient_RGB.svg',
     alt: 'Instagram Logo',
+    flexBasis: '4%',
   },
   {
     src: '/markup-cropped.svg',
     alt: 'Meta Logo',
+    flexBasis: '17%',
   },
   {
     src: '/instacart-color-logo.svg',
     alt: 'Instacart Logo',
+    flexBasis: '22%',
   },
   {
     src: '/Lyft_logo.svg',
     alt: 'Lyft Logo',
+    flexBasis: '5.6%',
   },
   {
     src: '/yclogo.svg',
     alt: 'Y Combinator Logo',
+    flexBasis: '19.9%',
   },
 ]
 
@@ -145,7 +151,7 @@ export default function Home() {
                 products.
               </h2>
             </div>
-            <div className="sm:max-w-xs sm:ml-24 mt-12 sm:mt-0 mx-auto">
+            <div className="sm:max-w-xs sm:ml-24 mt-12 sm:mt-0">
               <ContactForm />
             </div>
           </div>

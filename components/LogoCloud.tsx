@@ -1,28 +1,21 @@
 import Image from 'next/image'
 
 interface Props {
-  logos: { src: string; alt: string }[]
+  logos: {
+    src: string
+    alt: string
+    flexBasis: string
+  }[]
 }
 
 export default function LogoCloud({ logos }: Props) {
   return (
-    <div className="h-12">
-      <div className="max-w-7xl h-full">
-        <div className="flex flex-row items-center justify-center relative h-full w-full">
-          {logos.map(({ src, alt }) => (
-            <div
-              key={src}
-              className="grow flex flex-row justify-center items-center relative h-full mr-4 last:mr-0 sm:mr-6 md:mr-8"
-            >
-              <img
-                src={src}
-                alt={alt}
-                style={{ width: 'auto', height: '100%' }}
-              />
-            </div>
-          ))}
+    <div className="flex flex-row items-center justify-between max-w-7xl h-12">
+      {logos.map(({ src, alt, flexBasis }) => (
+        <div key={src} className="relative h-full" style={{ flexBasis }}>
+          <Image src={src} alt={alt} fill />
         </div>
-      </div>
+      ))}
     </div>
   )
 }
