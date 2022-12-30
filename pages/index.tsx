@@ -113,10 +113,10 @@ export default function Home() {
         </section>
 
         <section className="bg-orange-500 px-6 py-12 text-center">
-          <h3 className="text-white font-semibold text-3xl">
+          <h3 className="text-white font-medium text-3xl">
             Our commitment to you is speed, quality, and overcommunication.
           </h3>
-          <p className="text-orange-100 mt-6">
+          <p className="text-orange-50 mt-6 font-medium">
             Agencies with outsourced developers can’t make that promise.
           </p>
         </section>
@@ -126,7 +126,7 @@ export default function Home() {
             We are founders, just like you.
           </h2>
           <p className="mt-3 text-xl font-medium text-gray-500 leading-tight">
-            We have started multiple companies in the past, so we deeply
+            We have also started multiple companies in the past, so we deeply
             understand your needs.
           </p>
         </section>
