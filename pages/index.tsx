@@ -41,30 +41,28 @@ const LOGOS = [
 
 export default function Home() {
   return (
-    <div className="bg-white max-w-7xl text-gray-800 h-full">
+    <div className="bg-white max-w-7xl text-gray-900 h-full">
       <nav
-        className="fixed top-0 left-0 border-b border-gray-200 w-full px-6 py-2 z-50"
+        className="fixed top-0 left-0 border-b border-gray-300 w-full px-6 py-3 z-50"
         style={{
           backdropFilter: 'saturate(180%) blur(20px)',
           backgroundColor: 'rgba(255, 255, 255, 0.72)',
         }}
       >
-        <h1 className="text-2xl font-bold text-gray-800">
+        <h1 className="text-xl font-medium text-gray-800">
           Brooklyn Dev Collective
         </h1>
       </nav>
       <main className="flex flex-col h-full">
-        <section className="px-6">
-          <div className="mt-24">
-            <h1 className="text-5xl font-extrabold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text leading-tight">
-              Not your typical Dev Agency.
-            </h1>
-            <p className="mt-6 text-xl font-medium text-gray-600">
-              BK Devs is a New York based co-op for veteran software engineers.
-            </p>
-          </div>
+        <section className="px-6 py-28">
+          <h1 className="text-5xl font-semibold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text tracking-tight pb-1">
+            Not your typical Dev Agency.
+          </h1>
+          <p className="mt-3 text-xl font-medium text-gray-500 leading-tight">
+            BK Devs is a New York based co-op for veteran software engineers.
+          </p>
           <div
-            className="w-full relative mx-auto mt-12"
+            className="w-full relative mx-auto mt-8"
             style={{ paddingBottom: '82%' }}
           >
             <Image
@@ -77,23 +75,22 @@ export default function Home() {
               // placeholder="blur"
             />
           </div>
-          <div className="flex flex-row items-center justify-center w-full text-blue-400 mt-6">
+          <div className="flex flex-row items-center justify-center w-full text-blue-400 mt-4">
             <Link href="/">View Portfolio &gt;</Link>
           </div>
         </section>
 
-        <section className="bg-gray-50 px-12 mt-14 py-16">
+        <section className="bg-gray-50 px-6 py-14">
           <div className="w-full">
             <LogoCloud logos={LOGOS} />
           </div>
-          <p className="mt-6 text-gray-500 text-medium text-2xl text-center">
-            Since 2014, our members have been working at several well-known tech
-            companies.
+          <p className="mt-6 text-gray-500 text-medium text-2xl">
+            Since 2014, our members have been working at industry giants.
           </p>
         </section>
 
-        <section className="px-6 py-20">
-          <p className="font-semibold text-gray-600">
+        <section className="px-6 py-28 text-center">
+          <p className="font-medium text-lg text-gray-600">
             Together we've worked at
           </p>
           <h2 className="text-xl font-semibold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text">
@@ -124,13 +121,13 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="py-20 px-6">
-          <h2 className="text-5xl font-semibold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text leading-tight">
+        <section className="py-28 px-6">
+          <h2 className="text-5xl font-semibold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text tracking-tight pb-1">
             We are founders, just like you.
           </h2>
-          <p className="text-gray-600 font-semibold text-xl mt-6">
-            We have completed YC and started multiple companies in the past, so
-            we deeply understand your needs.
+          <p className="mt-3 text-xl font-medium text-gray-500 leading-tight">
+            We have started multiple companies in the past, so we deeply
+            understand your needs.
           </p>
         </section>
       </main>
