@@ -50,21 +50,15 @@ const LOGOS = [
 export default function Home() {
   return (
     <div className="bg-white max-w-7xl text-gray-900 h-full">
-      <nav
-        className="fixed top-0 left-0 border-b border-gray-300 w-full px-6 py-3 z-50"
-        style={{
-          backdropFilter: 'saturate(180%) blur(20px)',
-          backgroundColor: 'rgba(255, 255, 255, 0.72)',
-        }}
-      >
-        <h1 className="text-xl font-medium text-gray-800">Apps By Andrew</h1>
+      <nav className="fixed top-0 left-0 border-b border-gray-300 w-full px-6 py-2.5 z-50 bg-white">
+        <h1 className="text-lg font-medium text-gray-800">Apps By Andrew</h1>
       </nav>
       <main className="flex flex-col h-full">
-        <section className="px-6 py-28">
-          <h1 className="text-6xl font-semibold bg-gradient-to-r from-teal-400 to-emerald-300 text-transparent bg-clip-text tracking-tight pb-1">
-            Software for Pet Care Professionals.
+        <section className="px-6 py-32">
+          <h1 className="text-6xl font-medium bg-gradient-to-r from-teal-400 to-rose-300 text-transparent bg-clip-text tracking-tight pb-1 via-blue-400">
+            Software for Pet Care.
           </h1>
-          <p className="mt-3 text-2xl text-gray-600 leading-tight">
+          <p className="mt-8 text-xl text-gray-500 font-semibold leading-tight">
             Custom Websites & Mobile Apps to elevate your growing business.
           </p>
           <div
@@ -85,50 +79,48 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <div className="relative w-full" style={{ paddingBottom: '151%' }}>
-            <h2 className="absolute top-6 text-3xl z-40 font-semibold text-white text-center w-full">
-              Hi, I'm Andrew!
-            </h2>
-            <p className="absolute top-16 z-40 text-white text-lg px-3 text-center">
-              I've been a software engineer since 2014 at tech giants like
-              Instacart, Thumbtack, & Lyft.
-            </p>
+        <section className="bg-gray-100 py-16">
+          <div className="px-6">
+            <h2 className="font-semibold text-5xl">Hi, I'm</h2>
+            <h2 className="mt-1.5 font-bold text-6xl">Andrew!</h2>
+          </div>
+          <div className="mt-8 mx-6 relative h-96">
             <Image
               src="/andrew.jpg"
               fill
               alt="BK Devs Team Photo"
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: 'cover' }}
               priority
               sizes="(max-width: 1280px) 336px"
               // placeholder="blur"
             />
           </div>
-        </section>
-
-        <div className="relative w-full">
-          <div className="absolute -top-20 z-40 w-full px-6">
+          <div className="w-full px-6 mt-6">
             <LogoCloud logos={LOGOS} />
           </div>
-        </div>
-
-        <section className="bg-teal-500 px-6 py-12 text-center -mt-0.5">
-          <h3 className="text-white font-medium text-3xl">code + pets = ❤️</h3>
-          <p className="text-white mt-6 font-lg">
-            Working for Big Tech was necessary to gain programming expertise,
-            but now I am following my true passion.
+          <p className="mt-4 font-medium text-gray-600 text-2xl px-6">
+            Since 2014, I worked as a software engineer at tech giants like
+            Instacart, Thumbtack, & Lyft.
           </p>
         </section>
 
-        <section className="px-6 py-28 text-center">
+        <section className="bg-teal-500 px-6 py-16">
+          <h3 className="text-white font-medium text-4xl">code + pets = ❤️</h3>
+          <p className="text-white mt-6 text-lg">
+            Working for Big Tech was necessary to earn my programming expertise,
+            but now I'm following my passion.
+          </p>
+        </section>
+
+        <section className="px-6 py-20 text-center">
           <p className="font-medium text-lg text-gray-600">
-            I build custom business software for
+            My software solutions are for
           </p>
           <h2 className="text-xl font-semibold bg-gradient-to-r from-red-400 to-amber-300 text-transparent bg-clip-text">
             Groomers, Vets, Walkers, Sitters, & Kennel owners.
           </h2>
           <div
-            className="w-full relative mx-auto mt-10"
+            className="w-full relative mx-auto mt-14"
             style={{ paddingBottom: '53%' }}
           >
             <Image
@@ -143,7 +135,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-50 px-6 py-14">
+        <section className="bg-gray-100 px-6 py-14">
           <h1 className="text-2xl font-semibold text-center">
             Supercharge your day-to-day
           </h1>
@@ -193,20 +185,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col justify-center my-32 px-6 pb-32">
+        <section className="flex flex-col justify-center my-24 px-6 pb-32">
           <div className="flex sm:flex-row flex-col">
             <div className="flex-1 shrink">
-              <h2 className="md:text-6xl text-5xl font-bold">
+              <h2 className="md:text-6xl text-5xl font-semibold">
                 Eager to learn more?
               </h2>
 
               <h2 className="text-xl md:text-2xl mt-4 text-gray-500">
-                I'm offering a free 15-minute consultation to new customers so
-                we can diagnose your software needs.
+                Request a free 15-minute consultation where we can diagnose your
+                software needs.
               </h2>
             </div>
 
-            <div className="sm:max-w-xs sm:ml-24 mt-12 sm:mt-0">
+            <div className="sm:max-w-xs sm:ml-24 mt-10 sm:mt-0">
               <ContactForm />
             </div>
           </div>

@@ -146,10 +146,10 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="text-right sm:col-span-2 mt-4">
+      <div className="text-right sm:col-span-2 mt-10">
         <button
           type="submit"
-          className="inline-flex justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+          className="inline-flex justify-center rounded-md border border-transparent bg-teal-500 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
         >
           Request Free Consultation
         </button>
