@@ -11,12 +11,11 @@ export default function ContactForm() {
   const [email, setEmail] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [projectType, setProjectType] = useState<string>('Mobile App')
-  const [budget, setBudget] = useState<string>('$75K - $150K')
+  const [budget, setBudget] = useState<string>('$2k - $5k')
   const [timeline, setTimeline] = useState<string>('ASAP')
   const today = new Date()
-  const in8Weeks = addWeeks(today, 8)
-  const in13Weeks = addWeeks(today, 13)
-  const in26Weeks = addWeeks(today, 26)
+
+  const inXWeeks = (weeks: number) => addWeeks(today, weeks)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -95,28 +94,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-row mt-4">
-        <div className="grow w-1/2">
-          <label
-            htmlFor="currency"
-            className="block text-base font-medium text-gray-600"
-          >
-            Project Type
-          </label>
-          <div className="relative mt-1.5 mr-1">
-            <select
-              id="type"
-              name="type"
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
-              onChange={(e) => setProjectType(e.currentTarget.value)}
-              value={projectType}
-            >
-              <option>Mobile App</option>
-              <option>Web App</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-        <div className="grow w-1/2">
+        <div className="grow">
           <label
             htmlFor="budget"
             className="block text-base font-medium text-gray-600"
@@ -131,41 +109,49 @@ export default function ContactForm() {
               name="budget"
               className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
             >
-              <option>Less than $75K</option>
-              <option>$75K - $150K</option>
-              <option>$150K - $300K</option>
-              <option>$300K+</option>
+              <option>Less than $2k</option>
+              <option>$2k - $5k</option>
+              <option>$5k - $25k</option>
+              <option>$25k+</option>
+            </select>
+          </div>
+        </div>
+        <div className="grow ml-2">
+          <label
+            htmlFor="Timeline"
+            className="block text-base font-medium text-gray-600"
+          >
+            Timeline
+          </label>
+          <div className="relative mt-1.5">
+            <select
+              id="timeline"
+              name="timeline"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
+              value={timeline}
+              onChange={(e) => setTimeline(e.currentTarget.value)}
+            >
+              <option>ASAP</option>
+              <option>
+                (4 weeks) - deliver by {format(inXWeeks(4), 'MMM d')}{' '}
+              </option>
+              <option>
+                (8 weeks) - deliver by {format(inXWeeks(8), 'MMM d')}{' '}
+              </option>
+              <option>
+                (13 weeks) - deliver by {format(inXWeeks(13), 'MMM d')}{' '}
+              </option>
             </select>
           </div>
         </div>
       </div>
 
-      <label
-        htmlFor="timeline"
-        className="block text-base font-medium text-gray-600 mt-4"
-      >
-        Timeline
-      </label>
-      <div className="relative mt-1.5">
-        <select
-          id="timeline"
-          name="timeline"
-          className="block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm"
-          value={timeline}
-          onChange={(e) => setTimeline(e.currentTarget.value)}
-        >
-          <option>ASAP</option>
-          <option>(8 weeks) - deliver by {format(in8Weeks, 'MMM d')} </option>
-          <option>(13 weeks) - deliver by {format(in13Weeks, 'MMM d')} </option>
-          <option>(26 weeks) - deliver by {format(in26Weeks, 'MMM d')} </option>
-        </select>
-      </div>
       <div className="text-right sm:col-span-2 mt-4">
         <button
           type="submit"
           className="inline-flex justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
         >
-          Contact Us
+          Request Free Consultation
         </button>
       </div>
     </form>
